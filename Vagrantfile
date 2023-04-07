@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "say01pcgobs0#{i}" do |node|
       node.vm.box = "gusztavvargadr/windows-10"
       node.vm.network "private_network", ip: "192.168.1.1#{i}", virtualbox__intnet: "say01.local"
-      node.vm.hostname = "say01pcgobs0#{i}.say01.local"
+      node.vm.hostname = "say01pcgobs0#{i}"
       node.vm.provider "virtualbox" do |vb|
         vb.memory = "4096"
         vb.name = "say01pcgobs0#{i}"
